@@ -1,0 +1,92 @@
+/* 
+ * Basic CSS for Assignments, syst10199 term 2.
+ * Wendi Jollymore, 2019
+ */
+
+ /* definitions, root elements */
+
+ :root {
+    --main-color: #405060;
+    --accent-color1: #A09898;
+    --accent-color2: #fbe4aa;
+    --highlight: #fdf8e7;
+ }
+
+ body, html {
+    font: 16px Arial,sans-serif;
+ }
+
+ body {
+    background-image: url("cheeseTile_alpha.png");
+    display: flex;
+    flex-flow: column;
+ }
+
+ /* page structure and layout */
+
+ header, footer, form {
+    border-radius: 5px;
+ }
+
+ header, footer, main, form {
+    margin: 5px;
+    padding: 5px;
+ }
+
+ header, footer {
+    background-color: var(--accent-color2);
+    color: var(--main-color);
+ }
+
+ footer > address {
+    margin: 3px;
+ }
+
+ nav {
+    background-color: var(--main-color);
+    padding: 5px 2px;
+ }
+
+ /* navigation links */ 
+
+ nav a {
+    background-color: var(--main-color);
+    color: white;
+    display: block;
+    margin: 2px 0px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+ }
+
+nav a:visited {
+    border: 1px solid var(--main-color);
+    color: var(--accent-color1);
+ }
+
+nav a:hover {
+    background-color: var(--accent-color2);
+    color: var(--main-color);
+ }
+
+ /* div for output */
+
+ form + div {
+    font-weight: bold;
+    margin: 10px 5px 5px 5px;
+    padding: 5px;
+ }
+ form + div > div {
+    margin: 2px;
+    padding: 2px;
+ }
+
+ /* for larger screens */
+ @media screen and (min-width: 398px) {
+
+    /* display links in a row */
+    nav a {
+        display: inline-block;
+        text-align: left;
+    }
+ }

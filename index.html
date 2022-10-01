@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- Cheese Inventory Index Page 
+    Summer 2022, Assignment 4
+    Wendi Jollymore
+    Modified By: Tuyet Mai Pham
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sydney's Cheesey Cheese</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="forms.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Sydney's Cheesey Cheese</h1>
+      <h2>Add Cheesey Inventory</h2>
+    </header>
+
+    <main>
+      <!-- cheese form -->
+      <form name="cheese">
+        <!--  cheese Information -->
+        <fieldset>
+          <div>
+            <label for="name"
+              >Cheese Name:
+              <input
+                type="text"
+                id="name"
+                name="cheeseName"
+                required
+                size="50"
+                maxlength="255"
+            /></label>
+          </div>
+          <div>
+            <label for="weight"
+              >Weight:
+              <input
+                type="text"
+                id="weight"
+                name="cheeseWeight"
+                size="5"
+                required
+                pattern="(\d*\.)?\d+"
+              />
+            </label>
+
+            <label for="units"
+              >Units:
+              <select id="units" name="weightUnits">
+                <option value="Lb. Wheel" selected>Lb. Wheel</option>
+                <option value="Lb. Half Wheel">Lb. Half Wheel</option>
+                <option value="Lb. Quarter Wheel">Lb. Quarter Wheel</option>
+                <option value="Lb. Eighth Wheel">Lb. Eighth Wheel</option>
+                <option value="Lb. Square">Lb. Square</option>
+                <option value="Lb. Tomme">Lb. Tomme</option>
+              </select></label
+            >
+          </div>
+
+          <div>
+            <label for="price"
+              >Price:
+              <input
+                type="text"
+                id="price"
+                name="cheesePrice"
+                pattern="(\d*\.)?\d+"
+                required
+              />
+            </label>
+          </div>
+          <div>
+            <label for="spec"
+              >Spec Sheet URL:
+              <input type="url" id="spec" name="cheeseUrl" size="50" />
+            </label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div>
+            <label for="qty"
+              >Units Added:
+              <input
+                type="number"
+                id="qty"
+                name="cheeseQty"
+                min="1"
+                max="100"
+                value="25"
+                required
+            /></label>
+          </div>
+        </fieldset>
+
+        <!--  buttons to process form -->
+        <div>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+
+      <!-- where list of newly added cheese will appear -->
+      <div></div>
+      <a href=""></a>
+    </main>
+
+    <footer>
+      <address>&copy; 2022 Wendi Jollymore</address>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

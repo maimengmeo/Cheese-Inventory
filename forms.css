@@ -1,0 +1,43 @@
+/* 
+ * Basic CSS for Assignments, syst10199 term 2.
+ * Wendi Jollymore, 2019
+
+ * Specific to forms.  Uses vars from main.css.
+ */
+
+form {
+    background-color: var(--highlight);
+    box-shadow: 4px 4px 2px var(--accent-color1);
+    display: inline-block;
+    padding: 7px;
+}
+
+form div, fieldset {
+    padding: 5px;
+}
+
+fieldset {
+    border: 1px dashed var(--main-color);
+    margin: 5px;
+}
+
+label {
+    font-weight: bold;
+}
+
+label, input, select {
+    display: block;
+}
+
+label {
+    margin-top: 7px;
+}
+
+/* for larger screens */
+@media screen and (min-width: 768px) {
+
+    /* allow for rows of fields/labels */
+    label, input, select {
+        display: inline;
+    }
+}
